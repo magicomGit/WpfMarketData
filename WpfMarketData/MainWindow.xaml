@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfMarketData.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMarketData"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <ComboBox x:Name="CbSymbols"   HorizontalAlignment="Left" Margin="3" Height="22"  VerticalAlignment="Top" Width="77" SelectionChanged="CbSymbols_SelectionChanged"/>
+            </StackPanel>
+            <StackPanel x:Name="StackData" Orientation="Horizontal">
+                <Label Content="Binance"/>
+                <Label Width="80" Content="{Binding Binance}"/>
+
+                <Label Content="Bybit"/>
+                <Label Width="80" Content="{Binding Bybit}"/>
+
+                <Label Content="Kucoin"/>
+                <Label Width="80" Content="{Binding Kucoin}"/>
+
+                <Label Content="Bitget"/>
+                <Label Width="80" Content="{Binding Bitget}"/>
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
